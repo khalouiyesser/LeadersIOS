@@ -1,29 +1,35 @@
-//
-//  HomeViewController.swift
-//  DamLeaders
-//
-//  Created by Mac2021 on 7/11/2024.
-//
-
 import UIKit
+/*
+class HomeViewController: UIViewController, UITabBarDelegate {
 
-class HomeViewController: UIViewController {
-
+    @IBOutlet weak var navBar: UITabBar!
+    @IBOutlet weak var settingsButton: UITabBarItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Set UITabBar delegate
+        navBar.delegate = self
+
+        // Optionally, set a custom image for the setting button
+        /*if let settingButton = settingButton {
+            settingButton.image = UIImage(named: "settings") // Replace with your image name
+        }*/
+    }
+
+    // MARK: - UITabBarDelegate
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if item == settingsButton {
+            // Trigger the segue to the Settings page
+            performSegue(withIdentifier: "settings", sender: nil)
+        }
     }
     
-
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "settings" {
+            // Pass any data to the SettingsViewController if needed
+        }
     }
-    */
-
 }
+*/
